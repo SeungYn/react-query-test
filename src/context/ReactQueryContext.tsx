@@ -20,7 +20,10 @@ export default function ReactQueryContext({
       },
     },
   };
+
   const [client, setClient] = useState(new QueryClient(options));
+
+  // if state is not used is not to work query-cache
   //const client = new QueryClient(options);
   return (
     <QueryClientProvider client={client}>
